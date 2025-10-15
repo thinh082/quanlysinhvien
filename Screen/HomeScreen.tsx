@@ -4,200 +4,101 @@ import {
   Text,
   TouchableOpacity,
   StyleSheet,
-  ScrollView,
+  FlatList,
+  ImageBackground,
+  Platform,
 } from "react-native";
-import Ionicons from "@expo/vector-icons/Ionicons";
+
+const categories = [
+  { id: "1", title: "📘 Từ vựng", screen: "VocabularyList", color: "#60a5fa" },
+  {
+    id: "2",
+    title: "💬 Câu giao tiếp",
+    screen: "SentenceList",
+    color: "#34d399",
+  },
+  { id: "3", title: "🧠 Bài kiểm tra", screen: "Quiz", color: "#fbbf24" },
+  { id: "4", title: "❤️ Yêu thích", screen: "Favorites", color: "#f87171" },
+  { id: "5", title: "⚙️ Cài đặt", screen: "Settings", color: "#a78bfa" },
+];
 
 export default function HomeScreen() {
   return (
-    <ScrollView style={styles.container}>
-      {/* Header */}
-      <View style={styles.header}>
-        <View>
-          <Text style={styles.hello}>Xin chào, Phúc</Text>
-          <Text style={styles.subtitle}>Chào mừng trở lại lớp học 📖</Text>
-        </View>
-        <Ionicons name="notifications-outline" size={22} color="#C9A33A" />
-      </View>
+    <ImageBackground
+      source={{
+        uri: "https://images.unsplash.com/photo-1517841905240-472988babdf9",
+      }}
+      style={styles.background}
+      blurRadius={10}
+    >
+      <View style={styles.overlay} />
+      <View style={styles.container}>
+        <Text style={styles.title}>🌸 Học Tiếng Hàn Cơ Bản 🌸</Text>
 
-      {/* Summary Card */}
-      <View style={styles.summaryCard}>
-        <Text style={styles.points}>420</Text>
-        <Text style={styles.pointLabel}>Điểm hiện tại</Text>
-        <Text style={styles.desc}>Còn 80 điểm để đạt phần thưởng tuần</Text>
-        <TouchableOpacity style={styles.simpleBtn}>
-          <Text style={styles.simpleBtnText}>Làm bài ngay</Text>
-        </TouchableOpacity>
+        <FlatList
+          data={categories}
+          renderItem={({ item }) => (
+            <TouchableOpacity
+              activeOpacity={0.9}
+              style={[styles.card, { backgroundColor: item.color }]}
+            >
+              <Text style={styles.cardText}>{item.title}</Text>
+            </TouchableOpacity>
+          )}
+          keyExtractor={(item) => item.id}
+          contentContainerStyle={styles.listContainer}
+        />
       </View>
-
-      {/* Quick Stats */}
-      <View style={styles.statsRow}>
-        <View style={styles.statBox}>
-          <Ionicons name="book-outline" size={18} color="#C9A33A" />
-          <Text style={styles.statNumber}>4</Text>
-          <Text style={styles.statLabel}>Bài kiểm tra</Text>
-        </View>
-        <View style={styles.statBox}>
-          <Ionicons name="time-outline" size={18} color="#C9A33A" />
-          <Text style={styles.statNumber}>8h</Text>
-          <Text style={styles.statLabel}>Giờ học</Text>
-        </View>
-        <View style={styles.statBox}>
-          <Ionicons name="ribbon-outline" size={18} color="#C9A33A" />
-          <Text style={styles.statNumber}>2</Text>
-          <Text style={styles.statLabel}>Phần thưởng</Text>
-        </View>
-      </View>
-
-      {/* Upcoming Tests */}
-      <Text style={styles.sectionTitle}>Bài kiểm tra sắp tới</Text>
-      <View style={styles.testList}>
-        {[
-          { name: "Cân bằng phản ứng", sub: "Hóa học", time: "1 ngày" },
-          { name: "Dao động cơ", sub: "Vật lý", time: "2 ngày" },
-          { name: "Phương trình", sub: "Toán học", time: "3 ngày" },
-        ].map((t, i) => (
-          <View key={i} style={styles.testItem}>
-            <View style={{ flexDirection: "row", alignItems: "center" }}>
-              <Ionicons
-                name="document-text-outline"
-                size={18}
-                color="#C9A33A"
-                style={{ marginRight: 8 }}
-              />
-              <Text style={styles.testTitle}>{t.name}</Text>
-            </View>
-            <Text style={styles.testSub}>{t.sub}</Text>
-            <Text style={styles.testTime}>⏰ Còn {t.time}</Text>
-          </View>
-        ))}
-      </View>
-
-      {/* Subjects */}
-      <Text style={styles.sectionTitle}>Môn học</Text>
-      <View style={styles.subjectGrid}>
-        {[
-          { name: "Toán học", icon: "calculator-outline" },
-          { name: "Hóa học", icon: "flask-outline" },
-          { name: "Vật lý", icon: "magnet-outline" },
-          { name: "Sinh học", icon: "leaf-outline" },
-        ].map((s, i) => (
-          <TouchableOpacity key={i} style={styles.subjectBox}>
-            <Ionicons name={s.icon} size={18} color="#C9A33A" />
-            <Text style={styles.subjectText}>{s.name}</Text>
-          </TouchableOpacity>
-        ))}
-      </View>
-
-      {/* Footer */}
-      <View style={styles.footer}>
-        <Ionicons name="home-outline" size={20} color="#C9A33A" />
-        <Ionicons name="book-outline" size={20} color="#C9A33A" />
-        <Ionicons name="chatbubble-outline" size={20} color="#C9A33A" />
-        <Ionicons name="person-outline" size={20} color="#C9A33A" />
-      </View>
-    </ScrollView>
+    </ImageBackground>
   );
 }
 
 const styles = StyleSheet.create({
+  background: {
+    flex: 1,
+    resizeMode: "cover",
+  },
+  overlay: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: "rgba(0,0,0,0.25)",
+  },
   container: {
     flex: 1,
-    backgroundColor: "#FAFAFA",
-    padding: 20,
+    paddingHorizontal: 24,
+    paddingTop: Platform.OS === "ios" ? 80 : 60,
   },
-  header: {
-    flexDirection: "row",
-    justifyContent: "space-between",
+  title: {
+    fontSize: 30,
+    fontWeight: "800",
+    textAlign: "center",
+    color: "#fff",
+    marginBottom: 40,
+    textShadowColor: "rgba(0,0,0,0.3)",
+    textShadowOffset: { width: 1, height: 2 },
+    textShadowRadius: 6,
+  },
+  listContainer: {
+    paddingBottom: 60,
+  },
+  card: {
+    borderRadius: 18,
+    paddingVertical: 18,
+    marginVertical: 12,
     alignItems: "center",
-    marginBottom: 20,
-  },
-  hello: { fontSize: 22, fontWeight: "700", color: "#C9A33A" },
-  subtitle: { fontSize: 13, color: "#777", marginTop: 4 },
-
-  summaryCard: {
-    backgroundColor: "#FFF",
-    borderRadius: 14,
-    borderWidth: 1,
-    borderColor: "#EAE6DA",
-    alignItems: "center",
-    paddingVertical: 25,
-    marginBottom: 25,
-  },
-  points: { fontSize: 38, fontWeight: "700", color: "#C9A33A" },
-  pointLabel: { color: "#333", fontSize: 14, marginTop: 6 },
-  desc: { color: "#777", fontSize: 12, marginVertical: 8 },
-  simpleBtn: {
-    backgroundColor: "#C9A33A",
-    borderRadius: 8,
-    paddingHorizontal: 20,
-    paddingVertical: 8,
-  },
-  simpleBtnText: { color: "#fff", fontWeight: "600" },
-
-  statsRow: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    marginBottom: 25,
-  },
-  statBox: {
-    width: "31%",
-    backgroundColor: "#fff",
-    borderRadius: 10,
-    borderWidth: 1,
-    borderColor: "#EAE6DA",
-    alignItems: "center",
-    paddingVertical: 12,
-  },
-  statNumber: { fontSize: 16, fontWeight: "700", color: "#C9A33A" },
-  statLabel: { fontSize: 12, color: "#777", marginTop: 2 },
-
-  sectionTitle: {
-    fontSize: 15,
-    fontWeight: "600",
-    marginBottom: 10,
-    color: "#333",
-  },
-  testList: { marginBottom: 20 },
-  testItem: {
-    backgroundColor: "#fff",
-    borderRadius: 12,
-    borderWidth: 1,
-    borderColor: "#EAE6DA",
-    padding: 14,
-    marginBottom: 10,
-  },
-  testTitle: { fontWeight: "600", fontSize: 13, color: "#333" },
-  testSub: { color: "#C9A33A", fontSize: 12, marginTop: 4 },
-  testTime: { color: "#777", fontSize: 12, marginTop: 2 },
-
-  subjectGrid: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    justifyContent: "space-between",
-  },
-  subjectBox: {
-    width: "48%",
-    borderRadius: 12,
-    backgroundColor: "#fff",
-    borderWidth: 1,
-    borderColor: "#EAE6DA",
-    flexDirection: "row",
     justifyContent: "center",
-    alignItems: "center",
-    paddingVertical: 16,
-    marginBottom: 10,
-    gap: 6,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 6 },
+    shadowOpacity: 0.2,
+    shadowRadius: 8,
+    elevation: 8,
+    transform: [{ scale: 1 }],
   },
-  subjectText: { color: "#333", fontWeight: "600", fontSize: 13 },
-
-  footer: {
-    flexDirection: "row",
-    justifyContent: "space-around",
-    alignItems: "center",
-    marginTop: 25,
-    paddingVertical: 12,
-    borderTopWidth: 0.6,
-    borderColor: "#EAE6DA",
+  cardText: {
+    fontSize: 20,
+    fontWeight: "700",
+    color: "#fff",
+    textShadowColor: "rgba(0,0,0,0.2)",
+    textShadowOffset: { width: 0, height: 1 },
+    textShadowRadius: 3,
   },
 });

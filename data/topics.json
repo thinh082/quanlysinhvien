@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "name": "Gia đình",
+    "image": "family.png"
+  },
+  {
+    "id": 2,
+    "name": "Màu sắc",
+    "image": "colors.png"
+  },
+  {
+    "id": 3,
+    "name": "Động vật",
+    "image": "animals.png"
+  },
+  {
+    "id": 4,
+    "name": "Số đếm",
+    "image": "numbers.png"
+  },
+  {
+    "id": 5,
+    "name": "Thức ăn",
+    "image": "food.png"
+  }
+]

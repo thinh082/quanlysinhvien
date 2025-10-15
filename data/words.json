@@ -1,0 +1,186 @@
+[
+  {
+    "id": 1,
+    "topicId": 1,
+    "chinese": "妈妈",
+    "pinyin": "mā ma",
+    "meaning": "어머니",
+    "example": "我爱我的妈妈。",
+    "exampleMeaning": "나는 나의 어머니를 사랑해요."
+  },
+  {
+    "id": 2,
+    "topicId": 1,
+    "chinese": "爸爸",
+    "pinyin": "bà ba",
+    "meaning": "아버지",
+    "example": "爸爸工作很忙。",
+    "exampleMeaning": "아버지는 일이 아주 바빠요."
+  },
+  {
+    "id": 3,
+    "topicId": 1,
+    "chinese": "哥哥",
+    "pinyin": "gē ge",
+    "meaning": "형",
+    "example": "我有一个哥哥。",
+    "exampleMeaning": "나는 형이 한 명 있어요."
+  },
+  {
+    "id": 4,
+    "topicId": 1,
+    "chinese": "姐姐",
+    "pinyin": "jiě jie",
+    "meaning": "누나",
+    "example": "姐姐很漂亮。",
+    "exampleMeaning": "누나는 아주 예뻐요."
+  },
+
+  {
+    "id": 5,
+    "topicId": 2,
+    "chinese": "红色",
+    "pinyin": "hóng sè",
+    "meaning": "빨간색",
+    "example": "我喜欢红色。",
+    "exampleMeaning": "나는 빨간색을 좋아해요."
+  },
+  {
+    "id": 6,
+    "topicId": 2,
+    "chinese": "蓝色",
+    "pinyin": "lán sè",
+    "meaning": "파란색",
+    "example": "天空是蓝色的。",
+    "exampleMeaning": "하늘은 파란색이에요."
+  },
+  {
+    "id": 7,
+    "topicId": 2,
+    "chinese": "黄色",
+    "pinyin": "huáng sè",
+    "meaning": "노란색",
+    "example": "我有一件黄色的衣服。",
+    "exampleMeaning": "나는 노란색 옷이 한 벌 있어요."
+  },
+  {
+    "id": 8,
+    "topicId": 2,
+    "chinese": "绿色",
+    "pinyin": "lǜ sè",
+    "meaning": "초록색",
+    "example": "树是绿色的。",
+    "exampleMeaning": "나무는 초록색이에요."
+  },
+
+  {
+    "id": 9,
+    "topicId": 3,
+    "chinese": "猫",
+    "pinyin": "māo",
+    "meaning": "고양이",
+    "example": "我家有一只猫。",
+    "exampleMeaning": "우리 집에는 고양이가 한 마리 있어요."
+  },
+  {
+    "id": 10,
+    "topicId": 3,
+    "chinese": "狗",
+    "pinyin": "gǒu",
+    "meaning": "개",
+    "example": "狗是人类的朋友。",
+    "exampleMeaning": "개는 인간의 친구예요."
+  },
+  {
+    "id": 11,
+    "topicId": 3,
+    "chinese": "鱼",
+    "pinyin": "yú",
+    "meaning": "물고기",
+    "example": "鱼在水里游。",
+    "exampleMeaning": "물고기는 물속에서 헤엄쳐요."
+  },
+  {
+    "id": 12,
+    "topicId": 3,
+    "chinese": "鸟",
+    "pinyin": "niǎo",
+    "meaning": "새",
+    "example": "鸟在天上飞。",
+    "exampleMeaning": "새는 하늘을 날아요."
+  },
+
+  {
+    "id": 13,
+    "topicId": 4,
+    "chinese": "一",
+    "pinyin": "yī",
+    "meaning": "하나",
+    "example": "我有一个苹果。",
+    "exampleMeaning": "나는 사과 하나가 있어요."
+  },
+  {
+    "id": 14,
+    "topicId": 4,
+    "chinese": "二",
+    "pinyin": "èr",
+    "meaning": "둘",
+    "example": "我有两个兄弟。",
+    "exampleMeaning": "나는 남동생이 두 명 있어요."
+  },
+  {
+    "id": 15,
+    "topicId": 4,
+    "chinese": "三",
+    "pinyin": "sān",
+    "meaning": "셋",
+    "example": "三个人在吃饭。",
+    "exampleMeaning": "세 사람이 밥을 먹고 있어요."
+  },
+  {
+    "id": 16,
+    "topicId": 4,
+    "chinese": "四",
+    "pinyin": "sì",
+    "meaning": "넷",
+    "example": "我家有四口人。",
+    "exampleMeaning": "우리 가족은 네 명이에요."
+  },
+
+  {
+    "id": 17,
+    "topicId": 5,
+    "chinese": "米饭",
+    "pinyin": "mǐ fàn",
+    "meaning": "밥",
+    "example": "我喜欢吃米饭。",
+    "exampleMeaning": "나는 밥 먹는 것을 좋아해요."
+  },
+  {
+    "id": 18,
+    "topicId": 5,
+    "chinese": "面条",
+    "pinyin": "miàn tiáo",
+    "meaning": "국수",
+    "example": "他正在吃面条。",
+    "exampleMeaning": "그는 국수를 먹고 있어요."
+  },
+  {
+    "id": 19,
+    "topicId": 5,
+    "chinese": "苹果",
+    "pinyin": "píng guǒ",
+    "meaning": "사과",
+    "example": "苹果很好吃。",
+    "exampleMeaning": "사과는 맛있어요."
+  },
+  {
+    "id": 20,
+    "topicId": 5,
+    "chinese": "牛奶",
+    "pinyin": "niú nǎi",
+    "meaning": "우유",
+    "example": "我每天喝牛奶。",
+    "exampleMeaning": "나는 매일 우유를 마셔요."
+  }
+]

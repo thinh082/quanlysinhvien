@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "question": "'爸爸'는 무슨 뜻입니까?",
+    "options": ["엄마", "아빠", "형", "여동생"],
+    "correctAnswer": "아빠"
+  },
+  {
+    "id": 2,
+    "question": "‘파란색’을 뜻하는 단어는 무엇입니까?",
+    "options": ["红色", "蓝色", "黄色", "绿色"],
+    "correctAnswer": "蓝色"
+  },
+  {
+    "id": 3,
+    "question": "'猫'는 무슨 뜻입니까?",
+    "options": ["개", "새", "물고기", "고양이"],
+    "correctAnswer": "고양이"
+  },
+  {
+    "id": 4,
+    "question": "'姐姐'의 병음(pinyin)은 무엇입니까?",
+    "options": ["gē ge", "jiě jie", "mā ma", "bà ba"],
+    "correctAnswer": "jiě jie"
+  },
+  {
+    "id": 5,
+    "question": "'빨간색'을 뜻하는 단어는 무엇입니까?",
+    "options": ["黄色", "红色", "蓝色", "绿色"],
+    "correctAnswer": "红色"
+  },
+  {
+    "id": 6,
+    "question": "'一'는 몇을 의미합니까?",
+    "options": ["2", "3", "1", "4"],
+    "correctAnswer": "1"
+  },
+  {
+    "id": 7,
+    "question": "'米饭'은 무슨 뜻입니까?",
+    "options": ["국수", "우유", "밥", "사과"],
+    "correctAnswer": "밥"
+  },
+  {
+    "id": 8,
+    "question": "'苹果'는 무슨 뜻입니까?",
+    "options": ["바나나", "사과", "밥", "오렌지"],
+    "correctAnswer": "사과"
+  },
+  {
+    "id": 9,
+    "question": "'狗'의 병음(pinyin)은 무엇입니까?",
+    "options": ["gǒu", "māo", "yú", "niǎo"],
+    "correctAnswer": "gǒu"
+  },
+  {
+    "id": 10,
+    "question": "어떤 단어가 ‘숫자’ 주제에 속합니까?",
+    "options": ["米饭", "二", "猫", "红色"],
+    "correctAnswer": "二"
+  }
+]
